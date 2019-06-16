@@ -1,0 +1,53 @@
+<Generic>:
+	FloatLayout:
+		orientation: 'horizontal'
+		Label:
+			id:title
+			font_size: '20dp'
+			size_hint: (1, None)
+			width:512
+		    height: 100
+		    text_size: self.size
+    		halign: 'left'
+    		valign: 'middle'
+		    pos_hint:{'top': 1,'x':0.05}
+		Label:
+			id:info
+			text: "To: mscorreia95@gmail.com"
+			font_size: '14dp'
+			size_hint: (1, None)
+			width:512
+		    height: 100
+		    text_size: self.size
+    		halign: 'left'
+    		valign: 'middle'
+		    pos_hint:{'top': 0.90,'x':0.05}
+		Button:
+			text: "Return"
+			pos_hint:{'top': .95,'right':.95}
+			size_hint:0.15,0.05
+			on_release: root._return()
+
+		ScrollView:
+			pos_hint:{'top': .75,'right':1}
+			size_hint: (1,.70)
+			bar_width: 10
+	       
+	        effect_cls: "ScrollEffect"
+	        scroll_type: ['bars']
+
+	        BoxLayout:
+	        	id:box
+				orientation: 'vertical'
+				size_hint_y: None
+				height: self.minimum_height
+				
+		        Label:
+					id:content
+		            text_size: self.width, None
+		            size_hint_y: None
+		            padding_x: 80
+		            height: self.texture_size[1]
+					halign: 'left'
+					valign: 'top'
+			

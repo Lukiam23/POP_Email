@@ -1,0 +1,50 @@
+<Defealt>:
+	FloatLayout:
+		orientation: 'vertical'
+		Label:
+			size_hint:0.50,0.05
+			text: 'Server'
+			pos_hint:{'top': 0.90,'left':0.5}
+
+		TextInput:
+			id:server
+			text: "pop.googlemail.com"
+			pos_hint:{'top': 0.90,'right':.5}
+			size_hint:0.15,0.05
+
+		Label:
+			size_hint:0.50,0.05
+			text: 'Port'
+			pos_hint:{'top': 0.80,'left':0.5}
+
+		TextInput:
+			id:port
+			text: "995"
+			pos_hint:{'top': 0.80,'right':.5}
+			size_hint:0.15,0.05
+		
+		Label:
+			size_hint:0.50,0.05
+			text: 'Username'
+			pos_hint:{'top': 0.70,'left':0.5}
+
+		TextInput:
+			id:username
+			pos_hint:{'top': 0.70,'right':.5}
+			size_hint:0.15,0.05
+
+		Label:
+			size_hint:0.50,0.05
+			text: 'Password'
+			pos_hint:{'top': 0.60,'left':0.5}
+
+		TextInput:
+			id:password
+			password:True
+			pos_hint:{'top': 0.60,'right':.5}
+			size_hint:0.15,0.05
+		Button:
+			pos_hint:{'top': 0.50,'right':.50}
+			size_hint:0.15,0.05
+			text:'Connect'
+			on_press: root.connect()

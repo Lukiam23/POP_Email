@@ -1,0 +1,28 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:include defealt.kv
+#:include emailScreen.kv
+#:include generic.kv
+<Manager>:
+	id:screen_manager
+	transition: FadeTransition()
+
+	Defealt:
+		id:defealid
+		name: 'defealt'
+		manager: screen_manager
+
+	EmailScreen:
+		id:emailscreen
+		name: 'emailscreen'
+		manager: screen_manager
+
+	Generic:
+		id:generic
+		name: 'generic'
+		manager: screen_manager
+
+	
+
+
+
+	

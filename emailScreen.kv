@@ -1,0 +1,22 @@
+<emailScreen>:
+	FloatLayout:
+		orientation: 'horizontal'
+		Button:
+			text: "Return"
+			pos_hint:{'top': .95,'right':.95}
+			size_hint:0.15,0.05
+			on_release: root._return()
+		ScrollView:
+			id:scroll
+			pos_hint:{'left':1}
+			size_hint: (1, .8)
+	        bar_width: 10
+	       
+	        effect_cls: "ScrollEffect"
+	        scroll_type: ['bars']
+
+	        BoxLayout:
+	        	id:box
+				orientation: 'vertical'
+				size_hint_y: None
+				height: self.minimum_height
